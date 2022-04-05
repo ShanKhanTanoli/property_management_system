@@ -8,15 +8,15 @@ use App\Http\Livewire\Admin\Dashboard\Settings\Index as Settings;
 use App\Http\Livewire\Admin\Dashboard\Profile\Index as EditProfile;
 use App\Http\Livewire\Admin\Dashboard\Password\Index as EditPassword;
 
-use App\Http\Livewire\Admin\Dashboard\Business\Index as ViewAllBusiness;
-use App\Http\Livewire\Admin\Dashboard\Business\Add\Index as AddBusiness;
-use App\Http\Livewire\Admin\Dashboard\Business\Edit\Index as EditBusiness;
-use App\Http\Livewire\Admin\Dashboard\Business\UpdatePassword\Index as UpdateBusinessPassword;
+use App\Http\Livewire\Admin\Dashboard\Landlords\Index as ViewAllLandlords;
+use App\Http\Livewire\Admin\Dashboard\Landlords\Add\Index as AddLandlord;
+use App\Http\Livewire\Admin\Dashboard\Landlords\Edit\Index as EditLandlord;
+use App\Http\Livewire\Admin\Dashboard\Landlords\UpdatePassword\Index as UpdateLandlordPassword;
 
-use App\Http\Livewire\Admin\Dashboard\Clients\Index as ViewAllClients;
-use App\Http\Livewire\Admin\Dashboard\Clients\Add\Index as AddClient;
-use App\Http\Livewire\Admin\Dashboard\Clients\Edit\Index as EditClient;
-use App\Http\Livewire\Admin\Dashboard\Clients\UpdatePassword\Index as UpdateClientPassword;
+use App\Http\Livewire\Admin\Dashboard\Tenants\Index as ViewAllTenants;
+use App\Http\Livewire\Admin\Dashboard\Tenants\Add\Index as AddTenant;
+use App\Http\Livewire\Admin\Dashboard\Tenants\Edit\Index as EditTenant;
+use App\Http\Livewire\Admin\Dashboard\Tenants\UpdatePassword\Index as UpdateTenantPassword;
 
 /*Begin::Auth,Admin Group*/
 
@@ -24,21 +24,21 @@ Route::middleware(['auth', 'admin'])->prefix('Admin')->group(function () {
 
     Route::get('Dashboard', AdminDashboard::class)->name('AdminDashboard');
 
-    /*Begin::Business*/
-    Route::get('Business', ViewAllBusiness::class)->name('AdminBusiness');
-    Route::get('AddBusiness', AddBusiness::class)->name('AdminAddBusiness');
-    Route::get('EditBusiness/{slug}', EditBusiness::class)->name('AdminEditBusiness');
-    Route::get('UpdateBusiness/{slug}/Password', UpdateBusinessPassword::class)
-        ->name('AdminUpdateBusinessPassword');
-    /*End::Business*/
+    /*Begin::Landlords*/
+    Route::get('Landlords', ViewAllLandlords::class)->name('AdminLandlords');
+    Route::get('AddLandlord', AddLandlord::class)->name('AdminAddLandlord');
+    Route::get('EditLandlord/{slug}', EditLandlord::class)->name('AdminEditLandlord');
+    Route::get('UpdateLandlords/{slug}/Password', UpdateLandlordPassword::class)
+        ->name('AdminUpdateLandlordPassword');
+    /*End::Landlords*/
 
-    /*Begin::Clients*/
-    Route::get('Clients', ViewAllClients::class)->name('AdminClients');
-    Route::get('AddClient', AddClient::class)->name('AdminAddClient');
-    Route::get('EditClient/{slug}', EditClient::class)->name('AdminEditClient');
-    Route::get('UpdateClient/{slug}/Password', UpdateClientPassword::class)
-        ->name('AdminUpdateClientPassword');
-    /*End::Clients*/
+    /*Begin::Tenants*/
+    Route::get('Tenants', ViewAllTenants::class)->name('AdminTenants');
+    Route::get('AddTenant', AddTenant::class)->name('AdminAddTenant');
+    Route::get('EditTenant/{slug}', EditTenant::class)->name('AdminEditTenant');
+    Route::get('UpdateTenant/{slug}/Password', UpdateTenantPassword::class)
+        ->name('AdminUpdateTenantPassword');
+    /*End::Tenants*/
 
     /*Begin::Edit Profile & Password*/
     Route::get('EditProfile', EditProfile::class)->name('AdminEditProfile');

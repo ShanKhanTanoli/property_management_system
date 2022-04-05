@@ -16,12 +16,19 @@ return new class extends Migration
     {
         Schema::create('settings', function (Blueprint $table) {
             $table->id();
-            $table->string('text_logo');
+            $table->string('company_name')->nullable();
+            $table->string('company_logo')->nullable();
+            $table->string('company_email')->nullable();
+            $table->string('company_phone')->nullable();
+            $table->string('company_address')->nullable();
             $table->timestamps();
         });
 
         Setting::create([
-            'text_logo' => 'GiftCard',
+            'company_name' => 'Henrik Propertied LTD',
+            'company_email' => 'company@email.com',
+            'company_phone' => '+00000000000',
+            'company_address' => 'This is the Address',
         ]);
     }
 

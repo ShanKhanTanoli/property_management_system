@@ -195,8 +195,9 @@ return [
 
         'Setting' => App\Models\Setting::class,
         'Admin' => App\Helpers\Admin\Admin::class,
-        'Client' => App\Helpers\Client\Client::class,
-        'Business' => App\Helpers\Business\Business::class,
+        'Tenant' => App\Helpers\Tenant\Tenant::class,
+        'Landlord' => App\Helpers\Landlord\Landlord::class,
+        'Contractor' => App\Helpers\Contractor\Contractor::class,
 
     ])->toArray(),
 

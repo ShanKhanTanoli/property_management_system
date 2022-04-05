@@ -1,12 +1,6 @@
 <?php
 
-use App\Http\Livewire\Auth\Login;
-use App\Http\Livewire\Auth\Logout;
-use App\Http\Livewire\Auth\SignUp;
 use Illuminate\Support\Facades\Route;
-use App\Http\Livewire\Auth\ResetPassword;
-use App\Http\Livewire\Auth\ForgotPassword;
-use App\Http\Livewire\Auth\VerifyEmail;
 
 //Auth::routes();
 
@@ -28,32 +22,18 @@ Route::get('/', function () {
 include('admin/index.php');
 /*End::Admin Routes*/
 
-/*Begin::Business Routes*/
-include('business/index.php');
-/*End::Business Routes*/
+/*Begin::Landlord Routes*/
+include('landlord/index.php');
+/*End::Landlord Routes*/
 
-/*Begin::Client Routes*/
-include('client/index.php');
-/*End::Client Routes*/
+/*Begin::Tenant Routes*/
+include('tenant/index.php');
+/*End::Tenant Routes*/
 
+/*Begin::Contractor Routes*/
+include('contractor/index.php');
+/*End::Contractor Routes*/
 
 /*Begin::Auth Routes*/
-Route::get('register', SignUp::class)
-    ->name('register');
-
-Route::get('/login', Login::class)
-    ->name('login');
-
-Route::get('logout', Logout::class)
-    ->name('logout');
-
-Route::get('/login/forgot-password', ForgotPassword::class)
-    ->name('forgot-password');
-
-Route::get('/reset-password/{id}', ResetPassword::class)
-    ->name('reset-password')->middleware('signed');
-
-Route::get('VerifyEmail',VerifyEmail::class)
-->name('verification.notice')
-->middleware('auth');
+include('auth/index.php');
 /*End::Auth Routes*/

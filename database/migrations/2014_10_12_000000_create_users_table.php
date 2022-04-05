@@ -26,12 +26,11 @@ return new class extends Migration
             $table->string('number')->unique()->nullable();
             $table->string('password')->nullable();
 
-            $table->string('role')->nullable();
-            $table->string('role_id')->nullable();
+            $table->enum('role', ['admin', 'landlord', 'tenant', 'contractor'])->nullable();
+
+            $table->enum('role_id', ['1', '2', '3', '4'])->nullable();
 
             $table->string('slug')->nullable();
-
-            $table->string('parent_business_id')->nullable();
 
             $table->rememberToken()->nullable();
             $table->timestamps();
@@ -48,30 +47,42 @@ return new class extends Migration
             'slug' => strtoupper(Str::random(20)),
         ]);
 
-        for ($business = 1; $business < 101; $business++) {
+        for ($landlord = 1; $landlord < 101; $landlord++) {
             User::create([
-                'name' => 'business' . $business,
-                'user_name' => 'business' . $business,
-                'email' => 'business' . $business . '@email.com',
+                'name' => 'landlord' . $landlord,
+                'user_name' => 'landlord' . $landlord,
+                'email' => 'landlord' . $landlord . '@email.com',
                 'number' => mt_rand(100000000000, 999999999999),
                 'password' => bcrypt('password'),
-                'role' => 'business',
+                'role' => 'landlord',
                 'role_id' => '2',
                 'slug' => strtoupper(Str::random(20)),
             ]);
         }
 
-        for ($client = 1; $client < 101; $client++) {
+        for ($tenant = 1; $tenant < 101; $tenant++) {
             User::create([
-                'name' => 'client' . $client,
-                'user_name' => 'client' . $client,
-                'email' => 'client' . $client . '@email.com',
+                'name' => 'tenant' . $tenant,
+                'user_name' => 'tenant' . $tenant,
+                'email' => 'tenant' . $tenant . '@email.com',
                 'number' => mt_rand(100000000000, 999999999999),
                 'password' => bcrypt('password'),
-                'role' => 'client',
+                'role' => 'tenant',
                 'role_id' => '3',
                 'slug' => strtoupper(Str::random(20)),
-                'parent_business_id' => mt_rand(1,100),
+            ]);
+        }
+
+        for ($contractor = 1; $contractor < 101; $contractor++) {
+            User::create([
+                'name' => 'contractor' . $contractor,
+                'user_name' => 'contractor' . $contractor,
+                'email' => 'contractor' . $contractor . '@email.com',
+                'number' => mt_rand(100000000000, 999999999999),
+                'password' => bcrypt('password'),
+                'role' => 'contractor',
+                'role_id' => '4',
+                'slug' => strtoupper(Str::random(20)),
             ]);
         }
     }

@@ -8,15 +8,15 @@
                         <i class="fas fa-business-time opacity-10"></i>
                     </div>
                     <div class="text-end pt-1">
-                        <p class="text-sm mb-0 text-capitalize">Total Business</p>
+                        <p class="text-sm mb-0 text-capitalize">Landlords</p>
                         <h4 class="mb-0">
-                            {{ Business::count() }}
+                            {{ Landlord::count() }}
                         </h4>
                     </div>
                 </div>
                 <hr class="dark horizontal my-0">
                 <div class="card-footer p-3 text-center">
-                    <a href="{{ route('AdminBusiness') }}" class="btn bg-gradient-dark">
+                    <a href="{{ route('AdminLandlords') }}" class="btn bg-gradient-dark">
                         View All
                     </a>
                 </div>
@@ -30,15 +30,15 @@
                         <i class="fas fa-users opacity-10"></i>
                     </div>
                     <div class="text-end pt-1">
-                        <p class="text-sm mb-0 text-capitalize">Total Clients</p>
+                        <p class="text-sm mb-0 text-capitalize">Tenants</p>
                         <h4 class="mb-0">
-                            {{ Business::count() }}
+                            {{ Tenant::count() }}
                         </h4>
                     </div>
                 </div>
                 <hr class="dark horizontal my-0">
                 <div class="card-footer p-3 text-center">
-                    <a href="{{ route('AdminClients') }}"" class="btn bg-gradient-dark">
+                    <a href="{{ route('AdminTenants') }}"" class="btn bg-gradient-dark">
                         View All
                     </a>
                 </div>
@@ -52,7 +52,7 @@
                         <i class="fas fa-credit-card opacity-10"></i>
                     </div>
                     <div class="text-end pt-1">
-                        <p class="text-sm mb-0 text-capitalize">Total Cards</p>
+                        <p class="text-sm mb-0 text-capitalize">Contractors</p>
                         <h4 class="mb-0">
                             0
                         </h4>

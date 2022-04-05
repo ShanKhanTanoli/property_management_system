@@ -5,7 +5,6 @@
         <i class="fas fa-times p-3 cursor-pointer text-white opacity-5 position-absolute end-0 top-0 d-none d-xl-none"
             aria-hidden="true" id="iconSidenav"></i>
         <a class="navbar-brand m-0" href="{{ route('AdminDashboard') }}">
-            <i class="fas fa-tachometer-alt text-white"></i>
             <span class="ms-1 font-weight-bold text-white">
                 {{ Setting::Logo() }}
             </span>
@@ -27,39 +26,39 @@
             </li>
             <li class="nav-item mt-3">
                 <h6 class="ps-4 ms-2 text-uppercase text-xs text-white font-weight-bolder opacity-8">
-                    Business
+                    Landlords
                 </h6>
             </li>
             <li class="nav-item">
-                <a class="nav-link text-white @if (Request::path() == 'Admin/Business') ? active bg-gradient-primary : '' @endif"
-                    href="{{ route('AdminBusiness') }}">
+                <a class="nav-link text-white @if (Request::path() == 'Admin/Landlords') ? active bg-gradient-primary : '' @endif"
+                    href="{{ route('AdminLandlords') }}">
                     <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
-                        <i class="fas fa-business-time"></i>
+                        <i class="fas fa-users"></i>
                     </div>
-                    <span class="nav-link-text ms-1">Business</span>
+                    <span class="nav-link-text ms-1">Landlords</span>
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link text-white @if (Request::path() == 'Admin/AddBusiness') ? active bg-gradient-primary : '' @endif"
-                    href="{{ route('AdminAddBusiness') }}">
+                <a class="nav-link text-white @if (Request::path() == 'Admin/AddLandlord') ? active bg-gradient-primary : '' @endif"
+                    href="{{ route('AdminAddLandlord') }}">
                     <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
                         <i class="fas fa-plus"></i>
                     </div>
-                    <span class="nav-link-text ms-1">Add Business</span>
+                    <span class="nav-link-text ms-1">Add Landlord</span>
                 </a>
             </li>
             <li class="nav-item mt-3">
                 <h6 class="ps-4 ms-2 text-uppercase text-xs text-white font-weight-bolder opacity-8">
-                    Clients
+                    Tenants
                 </h6>
             </li>
             <li class="nav-item">
-                <a class="nav-link text-white @if (Request::path() == 'Admin/Clients') ? active bg-gradient-primary : '' @endif"
-                    href="{{ route('AdminClients') }}">
+                <a class="nav-link text-white @if (Request::path() == 'Admin/Tenants') ? active bg-gradient-primary : '' @endif"
+                    href="{{ route('AdminTenants') }}">
                     <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
                         <i class="fas fa-business-time"></i>
                     </div>
-                    <span class="nav-link-text ms-1">Clients</span>
+                    <span class="nav-link-text ms-1">Tenants</span>
                 </a>
             </li>
             <li class="nav-item mt-3">
@@ -99,6 +98,9 @@
                     <span class="nav-link-text ms-1">Settings</span>
                 </a>
             </li>
+            <!--Begin::Logout-->
+            @livewire('auth.logout')
+            <!--Begin::Logout-->
         </ul>
     </div>
 </aside>

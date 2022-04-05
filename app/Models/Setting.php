@@ -9,14 +9,19 @@ class Setting extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['text_logo'];
+    protected $fillable = [
+        'company_name', 'company_logo', 'company_email',
+        'company_phone', 'company_address',
+    ];
 
 
     public static function Logo()
     {
         $settings = Setting::first();
-        if($settings){
-            return $settings->text_logo;
-        }else return "Home";
+        if ($settings) {
+            if ($settings->company_logo) {
+                return $settings->company_logo;
+            } else return $settings->company_name;
+        } else return "Home";
     }
 }
