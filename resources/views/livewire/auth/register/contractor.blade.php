@@ -11,8 +11,7 @@
                     <div class="col-xl-4 col-lg-5 col-md-7 d-flex flex-column ms-auto me-auto ms-lg-auto ">
                         <div class="card card-plain">
                             <div class="card-header text-center">
-                                <h4 class="font-weight-bolder">Register</h4>
-                                <p class="mb-0">Enter your name , email and password to register</p>
+                                <h4 class="font-weight-bolder">Register as Contractor</h4>
                             </div>
                             <div class="card-body">
                                 <form role="form">
@@ -47,9 +46,11 @@
                                         @enderror
                                     </div>
                                     <div class="input-group input-group-outline mb-3">
-                                        <input id="password_confirmation" type="password" wire:model.defer="password_confirmation"
-                                            class="form-control @error('password_confirmation') is-invalid @enderror" name="password_confirmation"
-                                            autocomplete="password_confirmation" placeholder="Confirm Password">
+                                        <input id="password_confirmation" type="password"
+                                            wire:model.defer="password_confirmation"
+                                            class="form-control @error('password_confirmation') is-invalid @enderror"
+                                            name="password_confirmation" autocomplete="password_confirmation"
+                                            placeholder="Confirm Password">
                                         @error('password_confirmation')
                                             <span class="invalid-feedback" role="alert">
                                                 <strong>{{ $message }}</strong>
@@ -58,7 +59,7 @@
                                     </div>
                                     <div class="text-center">
                                         <button wire:click='register()' type="button"
-                                            class="btn btn-lg bg-gradient-primary btn-lg w-100 mt-4 mb-0">
+                                            class="btn btn-lg btn-bg-green btn-lg w-100 mt-4 mb-0">
                                             <span wire:loading class="spinner-border spinner-border-sm" role="status"
                                                 aria-hidden="true"></span>
                                             Register
@@ -69,8 +70,7 @@
                             <div class="card-footer text-center pt-0 px-lg-2 px-1">
                                 <p class="mb-2 text-sm mx-auto">
                                     Already have an Account ?
-                                    <a href="{{ route('login') }}"
-                                        class="text-primary text-gradient font-weight-bold">
+                                    <a href="{{ route('login') }}" class="text-green font-weight-bold">
                                         Login here
                                     </a>
                                 </p>

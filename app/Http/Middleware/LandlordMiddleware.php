@@ -19,7 +19,6 @@ class LandlordMiddleware
     {
         if (Auth::user()->role_id == 2 && Auth::user()->role == 'landlord') {
             return $next($request);
-        }
-        abort(404);
+        } else abort(404);
     }
 }

@@ -11,12 +11,13 @@ class Redirect
         if ($user = Auth::user()) {
             if ($user->role_id == 1 && $user->role == "admin") {
                 return route('AdminDashboard');
-            } elseif ($user->role_id == 2 && $user->role == "business") {
-                return route('BusinessDashboard');
-            } elseif ($user->role_id == 3 && $user->role == "client") {
-                return route('ClientDashboard');
+            } elseif ($user->role_id == 2 && $user->role == "landlord") {
+                return route('LandlordDashboard');
+            } elseif ($user->role_id == 3 && $user->role == "tenant") {
+                return route('TenantDashboard');
+            } elseif ($user->role_id == 4 && $user->role == "contractor") {
+                return route('ContractorDashboard');
             } else return route('login');
-        }
-        return route('login');
+        } else return route('login');
     }
 }

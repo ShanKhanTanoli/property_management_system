@@ -3590,6 +3590,54 @@ fieldset:disabled .btn {
   border-color: #e91e63;
 }
 
+/*Begin::Custom Green Button*/
+.btn-bg-green {
+  color: #fff;
+  background-color: rgb(53, 114, 37);
+  border-color: rgb(53, 114, 37);
+}
+
+.btn-bg-green:hover {
+  color: #fff;
+  background-color: rgb(53, 114, 37);
+  border-color: rgb(53, 114, 37);
+}
+
+.btn-check:focus+.btn-bg-green,
+.btn-bg-green:focus {
+  color: #fff;
+  background-color: rgb(53, 114, 37);
+  border-color: rgb(53, 114, 37);
+  box-shadow: 0 0 0 0.2rem rgb(53, 114, 37 , 0.5);
+}
+
+.btn-check:checked+.btn-bg-green,
+.btn-check:active+.btn-bg-green,
+.btn-bg-green:active,
+.btn-bg-green.active,
+.show>.btn-bg-green.dropdown-toggle {
+  color: #fff;
+  background-color: rgb(53, 114, 37);
+  border-color: rgb(53, 114, 37);
+}
+
+.btn-check:checked+.btn-bg-green:focus,
+.btn-check:active+.btn-bg-green:focus,
+.btn-bg-green:active:focus,
+.btn-bg-green.active:focus,
+.show>.btn-bg-green.dropdown-toggle:focus {
+  box-shadow: 0 0 0 0.2rem rgb(53, 114, 37 , 0.5);
+}
+
+.btn-bg-green:disabled,
+.btn-bg-green.disabled {
+  color: #fff;
+  background-color: rgb(53, 114, 37);
+  border-color: rgb(53, 114, 37);
+}
+/*End::Custom Green Button*/
+
+
 .btn-primary:hover {
   color: #000;
   background-color: #ec407a;
@@ -5939,8 +5987,8 @@ fieldset:disabled .btn {
 .page-item.active .page-link {
   z-index: 3;
   color: #fff;
-  background-color: #e91e63;
-  border-color: #e91e63;
+  background-color: rgb(53, 114, 37);
+  border-color: rgb(53, 114, 37);
 }
 
 .page-item.disabled .page-link {
@@ -10192,6 +10240,10 @@ fieldset:disabled .btn {
 /* rtl:end:remove */
 .text-primary {
   color: #e91e63 !important;
+}
+
+.text-green {
+  color: rgb(53, 114, 37) !important;
 }
 
 .text-secondary {
@@ -22205,6 +22257,11 @@ label,
   background-image: linear-gradient(195deg, #EC407A 0%, #D81B60 100%);
 }
 
+.bg-green {
+  background-color: rgb(53, 114, 37);
+}
+
+
 .bg-gradient-secondary {
   background-image: linear-gradient(195deg, #747b8a 0%, #495361 100%);
 }
@@ -23927,7 +23984,7 @@ body:not(.dark-version) .sidenav.bg-transparent .collapse .nav-item .nav-link.ac
   color: #fff;
   border-right-width: 0;
   border-bottom-width: 0;
-  background-color: rgba(199, 199, 199, 0.2);
+  background-color: rgb(53, 114, 37);
 }
 
 .navbar-vertical .navbar-nav>.nav-item .nav-link.active+.collapse .nav-item.active .nav-link.active,

@@ -4,8 +4,8 @@
             <div class="card">
                 <div class="card-header p-3 pt-2">
                     <div
-                        class="icon icon-lg icon-shape bg-gradient-dark shadow-dark text-center border-radius-xl mt-n4 position-absolute">
-                        <i class="fas fa-business-time opacity-10"></i>
+                        class="icon icon-lg icon-shape bg-green shadow-dark text-center border-radius-xl mt-n4 position-absolute">
+                        <i class="fas fa-users opacity-10"></i>
                     </div>
                     <div class="text-end pt-1">
                         <p class="text-sm mb-0 text-capitalize">Landlords</p>
@@ -16,7 +16,7 @@
                 </div>
                 <hr class="dark horizontal my-0">
                 <div class="card-footer p-3 text-center">
-                    <a href="{{ route('AdminLandlords') }}" class="btn bg-gradient-dark">
+                    <a href="{{ route('AdminLandlords') }}" class="btn btn-bg-green">
                         View All
                     </a>
                 </div>
@@ -26,7 +26,7 @@
             <div class="card">
                 <div class="card-header p-3 pt-2">
                     <div
-                        class="icon icon-lg icon-shape bg-gradient-dark shadow-dark text-center border-radius-xl mt-n4 position-absolute">
+                        class="icon icon-lg icon-shape bg-green shadow-dark text-center border-radius-xl mt-n4 position-absolute">
                         <i class="fas fa-users opacity-10"></i>
                     </div>
                     <div class="text-end pt-1">
@@ -38,7 +38,7 @@
                 </div>
                 <hr class="dark horizontal my-0">
                 <div class="card-footer p-3 text-center">
-                    <a href="{{ route('AdminTenants') }}"" class="btn bg-gradient-dark">
+                    <a href="{{ route('AdminTenants') }}" class="btn btn-bg-green">
                         View All
                     </a>
                 </div>
@@ -48,11 +48,11 @@
             <div class="card">
                 <div class="card-header p-3 pt-2">
                     <div
-                        class="icon icon-lg icon-shape bg-gradient-dark shadow-dark text-center border-radius-xl mt-n4 position-absolute">
-                        <i class="fas fa-credit-card opacity-10"></i>
+                        class="icon icon-lg icon-shape bg-green shadow-dark text-center border-radius-xl mt-n4 position-absolute">
+                        <i class="fas fa-city opacity-10"></i>
                     </div>
                     <div class="text-end pt-1">
-                        <p class="text-sm mb-0 text-capitalize">Contractors</p>
+                        <p class="text-sm mb-0 text-capitalize">Properties</p>
                         <h4 class="mb-0">
                             0
                         </h4>
@@ -60,7 +60,29 @@
                 </div>
                 <hr class="dark horizontal my-0">
                 <div class="card-footer p-3 text-center">
-                    <a href="#" class="btn bg-gradient-dark">
+                    <a href="#" class="btn btn-bg-green">
+                        View All
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
+            <div class="card">
+                <div class="card-header p-3 pt-2">
+                    <div
+                        class="icon icon-lg icon-shape bg-green shadow-dark text-center border-radius-xl mt-n4 position-absolute">
+                        <i class="fas fa-file-signature opacity-10"></i>
+                    </div>
+                    <div class="text-end pt-1">
+                        <p class="text-sm mb-0 text-capitalize">Contractors</p>
+                        <h4 class="mb-0">
+                            {{ Contractor::count() }}
+                        </h4>
+                    </div>
+                </div>
+                <hr class="dark horizontal my-0">
+                <div class="card-footer p-3 text-center">
+                    <a href="{{ route('AdminContractors') }}"class="btn btn-bg-green">
                         View All
                     </a>
                 </div>

@@ -20,7 +20,7 @@ class Contractor
 
     public static function all()
     {
-        return User::where('role_id', '3')
+        return User::where('role_id', '4')
             ->where('role', 'contractor');
     }
 

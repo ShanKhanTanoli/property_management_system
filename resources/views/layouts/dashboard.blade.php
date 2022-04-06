@@ -31,15 +31,21 @@
     <!--Begin::Sidebar-->
     @endif
 
-    @if($user->role_id == 2 && $user->role = "business")
+    @if($user->role_id == 2 && $user->role = "landlord")
     <!--Begin::Sidebar-->
-    @include('livewire.business.dashboard.partials.sidebar')
+    @include('livewire.landlord.dashboard.partials.sidebar')
     <!--Begin::Sidebar-->
     @endif
 
-    @if($user->role_id == 3 && $user->role = "client")
+    @if($user->role_id == 3 && $user->role = "tenant")
     <!--Begin::Sidebar-->
-    @include('livewire.client.dashboard.partials.sidebar')
+    @include('livewire.tenant.dashboard.partials.sidebar')
+    <!--Begin::Sidebar-->
+    @endif
+
+    @if($user->role_id == 4 && $user->role = "contractor")
+    <!--Begin::Sidebar-->
+    @include('livewire.contractor.dashboard.partials.sidebar')
     <!--Begin::Sidebar-->
     @endif
 

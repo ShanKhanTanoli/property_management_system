@@ -19,7 +19,6 @@ class TenantMiddleware
     {
         if (Auth::user()->role_id == 3 && Auth::user()->role == 'tenant') {
             return $next($request);
-        }
-        abort(404);
+        } else abort(404);
     }
 }

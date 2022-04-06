@@ -36,7 +36,7 @@ class Index extends Component
                 'number' => $validated['number'],
                 'password' => bcrypt($validated['password']),
                 'role_id' => 3,
-                'role' => 'client',
+                'role' => 'tenant',
                 'slug' => strtoupper(Str::random(20)),
             ];
             User::create($data);

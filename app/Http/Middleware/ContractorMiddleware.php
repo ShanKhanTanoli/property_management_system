@@ -19,7 +19,6 @@ class ContractorMiddleware
     {
         if (Auth::user()->role_id == 4 && Auth::user()->role == 'contractor') {
             return $next($request);
-        }
-        abort(404);
+        } else abort(404);
     }
 }

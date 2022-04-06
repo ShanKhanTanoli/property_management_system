@@ -26,16 +26,15 @@ class Index extends Component
     {
         if ($landlord = User::find($id)) {
             return redirect(route('AdminEditLandlord', $landlord->slug));
-        }
-        return session()->flash('error', 'Something went wrong');
+        } else return session()->flash('error', 'Something went wrong');
     }
 
     public function Delete($id)
     {
         if ($Landlord = User::find($id)) {
             $Landlord->delete();
-            return session()->flash('success', 'Deleted Successfully');
-        }
-        return session()->flash('error', 'Something went wrong');
+            session()->flash('success', 'Deleted Successfully');
+            return redirect(route('AdminLandlords'));
+        } else return session()->flash('error', 'Something went wrong');
     }
 }

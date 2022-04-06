@@ -51,7 +51,6 @@ class Landlord
     {
         return User::where('role_id', '3')
             ->where('role', 'tenant')
-            ->where('parent_landlord_id',$landlord)
             ->count();
     }
 

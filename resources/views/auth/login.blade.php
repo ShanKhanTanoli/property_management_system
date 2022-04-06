@@ -38,7 +38,7 @@
                                         </div>
                                         <div class="text-center">
                                             <button type="submit"
-                                                class="btn btn-lg bg-gradient-primary btn-lg w-100 mt-4 mb-0">
+                                                class="btn btn-lg btn-bg-green btn-lg w-100 mt-4 mb-0">
                                                 Login
                                             </button>
                                         </div>

@@ -4,19 +4,19 @@
             <div class="card">
                 <div class="card-header p-3 pt-2">
                     <div
-                        class="icon icon-lg icon-shape bg-gradient-dark shadow-dark text-center border-radius-xl mt-n4 position-absolute">
-                        <i class="fas fa-users opacity-10"></i>
+                        class="icon icon-lg icon-shape bg-green shadow-dark text-center border-radius-xl mt-n4 position-absolute">
+                        <i class="fas fa-city opacity-10"></i>
                     </div>
                     <div class="text-end pt-1">
-                        <p class="text-sm mb-0 text-capitalize">Total Tenants</p>
+                        <p class="text-sm mb-0 text-capitalize">Properties</p>
                         <h4 class="mb-0">
-                            {{ Landlord::CountTenants(Auth::user()->id) }}
+                            0
                         </h4>
                     </div>
                 </div>
                 <hr class="dark horizontal my-0">
                 <div class="card-footer p-3 text-center">
-                    <a href="{{ route('LandlordTenants') }}" class="btn bg-gradient-dark">
+                    <a href="0" class="btn btn-bg-green">
                         View All
                     </a>
                 </div>
@@ -26,11 +26,11 @@
             <div class="card">
                 <div class="card-header p-3 pt-2">
                     <div
-                        class="icon icon-lg icon-shape bg-gradient-dark shadow-dark text-center border-radius-xl mt-n4 position-absolute">
-                        <i class="fas fa-credit-card opacity-10"></i>
+                        class="icon icon-lg icon-shape bg-green shadow-dark text-center border-radius-xl mt-n4 position-absolute">
+                        <i class="fas fa-file-contract opacity-10"></i>
                     </div>
                     <div class="text-end pt-1">
-                        <p class="text-sm mb-0 text-capitalize">Total Cards</p>
+                        <p class="text-sm mb-0 text-capitalize">Leases</p>
                         <h4 class="mb-0">
                             0
                         </h4>
@@ -38,7 +38,7 @@
                 </div>
                 <hr class="dark horizontal my-0">
                 <div class="card-footer p-3 text-center">
-                    <a href="#" class="btn bg-gradient-dark">
+                    <a href="#" class="btn btn-bg-green">
                         View All
                     </a>
                 </div>

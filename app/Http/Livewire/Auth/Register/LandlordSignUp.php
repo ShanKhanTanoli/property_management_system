@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Livewire\Auth;
+namespace App\Http\Livewire\Auth\Register;
 
 use App\Models\User;
 use Livewire\Component;
@@ -8,7 +8,7 @@ use App\Helpers\Redirect;
 use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Hash;
 
-class SignUp extends Component
+class LandlordSignUp extends Component
 {
     public $name;
     public $email;
@@ -25,7 +25,7 @@ class SignUp extends Component
     public function mount()
     {
         if (auth()->user()) {
-            redirect('/dashboard');
+            redirect(Redirect::ToDashboard());
         }
     }
 
@@ -36,7 +36,7 @@ class SignUp extends Component
             'name' => $this->name,
             'user_name' => Str::random(10),
             'email' => $this->email,
-            'role' => 'business',
+            'role' => 'landlord',
             'role_id' => 2,
             'password' => Hash::make($this->password),
             'slug' => Str::random(20),
@@ -49,7 +49,7 @@ class SignUp extends Component
 
     public function render()
     {
-        return view('livewire.auth.register')
+        return view('livewire.auth.register.landlord')
             ->extends('layouts.auth');
     }
 }

@@ -38,7 +38,7 @@
                                     </div>
                                     <div class="text-center">
                                         <button wire:click='login()' type="button"
-                                            class="btn btn-lg bg-gradient-primary btn-lg w-100 mt-4 mb-0">
+                                            class="btn btn-lg btn-bg-green btn-lg w-100 mt-4 mb-0">
                                             <span wire:loading class="spinner-border spinner-border-sm" role="status"
                                                 aria-hidden="true"></span>
                                             Login
@@ -48,17 +48,23 @@
                             </div>
                             <div class="card-footer text-center pt-0 px-lg-2 px-1">
                                 <p class="mb-2 text-sm mx-auto">
-                                    Don't have an Account ?
-                                    <a href="{{ route('register') }}"
-                                        class="text-primary text-gradient font-weight-bold">
-                                        Register here
+                                    <a href="{{ route('landlord-register') }}" class="text-green font-weight-bold">
+                                        Register as Landlord
                                     </a>
                                 </p>
                                 <p class="mb-2 text-sm mx-auto">
-                                    Forgot your password ?
-                                    <a href="{{ route('forgot-password') }}"
-                                        class="text-primary text-gradient font-weight-bold">
-                                        Reset here
+                                    <a href="{{ route('tenant-register') }}" class="text-green font-weight-bold">
+                                        Register as Tenant
+                                    </a>
+                                </p>
+                                <p class="mb-2 text-sm mx-auto">
+                                    <a href="{{ route('contractor-register') }}" class="text-green font-weight-bold">
+                                        Register as Contractor
+                                    </a>
+                                </p>
+                                <p class="mb-2 text-sm mx-auto">
+                                    <a href="{{ route('forgot-password') }}" class="text-green font-weight-bold">
+                                        Forgot your password ? Reset here
                                     </a>
                                 </p>
                             </div>

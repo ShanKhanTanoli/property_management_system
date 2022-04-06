@@ -19,7 +19,6 @@ class AdminMiddleware
     {
         if (Auth::user()->role_id == 1 && Auth::user()->role == 'admin') {
             return $next($request);
-        }
-        abort(404);
+        } else abort(404);
     }
 }
